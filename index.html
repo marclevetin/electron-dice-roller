@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <main>
+        <div id="buttons">
+            <label>How many dice?
+                <input id='number-dice' type="range" min="1" max="10" value="1" />
+            </label>
+            <br />
+            <button data-dice="4">Roll <span class="num">1</span>d4</button>
+            <button data-dice="6">Roll <span class="num">1</span>d6</button>
+            <button data-dice="8">Roll <span class="num">1</span>d8</button>
+            <button data-dice="10">Roll <span class="num">1</span>d10</button>
+            <button data-dice="12">Roll <span class="num">1</span>d12</button>
+            <button data-dice="20">Roll <span class="num">1</span>d20</button>
+        </div>
+        <div id="rolled-results">
+            Your rolled <span id="roll"></span> and got <span id='results'></span>.
+        </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>
